@@ -6,6 +6,7 @@
  * Date create:        05.09.94
  * Last modification:  18.09.94
  */
+
 /*++++++++++++++ (1) Structure for NULL object ++++++++++++++++*/
 struct s_infonull {
        short   code;
@@ -25,10 +26,10 @@ struct s_info {
 
 /*+++++++++ (3) Structure for one VERTEX of mesh +++++++++*/
 struct s_vertex {
-       float   x_coord;   /* Coordinate X vertex of mesh */
-       float   y_coord;   /* Coordinate Y vertex of mesh */
-       float   z_coord;   /* Coordinate Z vertex of mesh */
-       short   zero;      /* 2 bytes = 0 */
+       float   x_coord;     /* Coordinate X vertex of mesh */
+       float   y_coord;     /* Coordinate Y vertex of mesh */
+       float   z_coord;     /* Coordinate Z vertex of mesh */
+       short   zero;        /* 2 bytes = 0 */
      };
 
 /*++++++ (4) Structures for one FACE and NORMAL of vertex +++++*/
@@ -63,10 +64,10 @@ struct s_edge_six {
 
 /*++++++ (6) Structure for CENTER AXIS ++++++*/
 struct s_center {
-       short   zero;       /* 2 bytes = 0 */
-       float   x0;         /*  X AXIS */
-       float   y0;         /*  Y AXIS */
-       float   z0;         /*  Z AXIS */
+       short   zero;        /* 2 bytes = 0 */
+       float   x0;          /*  X AXIS */
+       float   y0;          /*  Y AXIS */
+       float   z0;          /*  Z AXIS */
      };
 
 /*++++++ (7) Structure for END DATA mesh ++++++*/
@@ -83,5 +84,4 @@ struct s_endmesh {
        long    zero10;
        long    zero11;
      };
-
 /*+++++++++++++++++++++++ End Structures ++++++++++++++++++++++*/
