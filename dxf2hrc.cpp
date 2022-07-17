@@ -6,7 +6,7 @@
 
    usage:     dxf2hrc.exe  file_dxf  [file_hrc]  [options]
    options:   -h, help, ?  -->  Help
-			  -l,          -->  Output list Vertex and Faces
+	      -l,          -->  Output list Vertex and Faces
 
    Writing by S.Gasanov
    Ukrainian, Kiev, Manufacture of Advertisement Co.
@@ -229,14 +229,14 @@ void conv_process(void)
         break;
     };
 
-    Nobj = atoi(read2());     /* Tag = 70, Value = number objects */
+    Nobj = atoi(read2());     				/* Tag = 70, Value = number objects */
 
     /* Finding sections "BLOCKS" or "ENTITIES" */
     while (read2() != NULL)
     {
-        if (memcmp(s_val, "SECTION", 7) == 0)    /* if s_val = "SECTION" */
+        if (memcmp(s_val, "SECTION", 7) == 0)    	/* if s_val = "SECTION" */
         {
-            read2();                               /* Enter Tag, Value */
+            read2();                               	/* Enter Tag, Value */
             if (memcmp(s_val, "BLOCKS", 6) == 0)
                 blocks();
             if (memcmp(s_val, "ENTITIES", 8) == 0)
