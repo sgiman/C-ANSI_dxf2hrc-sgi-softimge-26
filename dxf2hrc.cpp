@@ -211,7 +211,7 @@ int main(int argc, char* argv[])
     fprintf(stderr, "\nNot found TABLE \"LAYER\"...\n");
     exit(-1);
 
-} // *****  E N D   M A I N  ******
+} // *****  E N D - M A I N  ******
 
 
 /*-----------------------------
@@ -318,7 +318,7 @@ void write_endmesh()
 
     /*********** (7) Writing END DATA mesh (48 bytes) ***********/
     endmesh.zero1 = ZERO;          /* word 1 */
-    endmesh.mode = LINK;          /* word 2 */
+    endmesh.mode = LINK;           /* word 2 */
     endmesh.zero3 = ZERO;          /* word 3 */
     endmesh.x_obj_cen = XOBJCEN;   /* word 4 */
     endmesh.y_obj_cen = YOBJCEN;   /* word 5 */
@@ -481,12 +481,12 @@ void conv_vertex(void)
         read2();                                 /* Tag=0, Val="VERTEX" */
         if (memcmp(s_val, "VERTEX", 6) == 0)
         {
-            read2();                            /* Passing Tag=8, Value=Name_layer */
-            read2();                            /* Tag = 10, Value = X */
+            read2();                             /* Passing Tag=8, Value=Name_layer */
+            read2();                             /* Tag = 10, Value = X */
             x_vert = atoff(s_val);
-            read2();                            /* Tag = 20, Value = Y */
+            read2();                             /* Tag = 20, Value = Y */
             y_vert = atoff(s_val);
-            read2();                            /* Tag = 30, Value = Z */
+            read2();                             /* Tag = 30, Value = Z */
             z_vert = atoff(s_val);
 
             if (flist)
@@ -913,8 +913,7 @@ void fexists(char* fname)
     };
 }
 
-/*------------------- def_hrc_name() ----------------------*/
-/************************************************************
+/********************* def_hrc_name() *************************
 void def_hrc_name(char *sname)
 {
     char dev[4],dir[70],file[10],suff[5];
