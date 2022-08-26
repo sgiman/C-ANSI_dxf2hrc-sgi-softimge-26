@@ -1,5 +1,5 @@
 # dxf2hrc-sgi-softimge-26
-# Convert DXF - AutoCAD Release 13 (1994) to HRC (Softmage 3D 2.6)
+## Converting DXF - AutoCAD Release 13 (1994) to HRC (Softmage 3D 2.6)
 
 
 
